@@ -51,17 +51,16 @@ int main()
 
     while(eps >= 1 || eps <= 0);
     printf("\n\n\t\t\tТаблица"
-           "\n\n\t\t+--------+------------+"
-             "\n\t\t|   x    |    F(x)    |"
-             "\n\t\t+--------+------------+");
+           "\n\n\t\t+----------+--------------+"
+             "\n\t\t|    x     |      F(x)    |"
+             "\n\t\t+----------+--------------+");
 
     for(double x = A; x <= B + eps; x += r)
     {
-        printf("\n\t\t|%8.2lf|%12.4lf|", x, series(x, eps));
-        printf("\n\t\t+--------+------------+");
+        printf("\n\t\t|%8.2lf  |%12.4lf  |", x, series(x, eps));
+        printf("\n\t\t+----------+--------------+");
     }
 
     getch();
     return 0;
 }
-
