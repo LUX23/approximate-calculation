@@ -30,6 +30,7 @@ int main()
     printf("\n\n\tВведите шаг табулирования: ");
 
     do
+        
     {
         scanf("%lf", &r);
         if(B - A < r)
