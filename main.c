@@ -6,12 +6,13 @@
 #include <conio.h>
 #include <locale.h>
 
-double series(double, double);
+double series(double x, double eps);
 int main()
 {
-    char *locale = setlocale(LC_ALL, "RUSSIAN");
+    setlocale (LC_CTYPE, "RUSSIAN");
 
-    double A, B;
+    double A, B, r, eps;
+
     printf("\n\tПечатается таблица функции, заданной рядом Тейлора\n"
            "\n\tВведите границы интервала\n");
 
@@ -26,8 +27,6 @@ int main()
     }
 
     while(A > B);
-    double r, eps;
-
     printf("\n\n\tВведите шаг табулирования: ");
 
     do
@@ -45,10 +44,11 @@ int main()
     do
     {
         scanf("%lf", &eps);
-        if(eps >= 1 || eps <= 0) printf("\n\tВведено недопустимое значение."
+        if (eps >= 1 || eps <= 0)
+            printf("\n\tВведено недопустимое значение."
                                     "\n\tПовторите: ");
-    }
 
+    }
     while(eps >= 1 || eps <= 0);
     printf("\n\n\t\t\tТаблица"
            "\n\n\t\t+----------+--------------+"
