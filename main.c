@@ -2,6 +2,7 @@
 #include <conio.h>
 #include <locale.h>
 
+
 double series(double x, double eps);
 int main()
 {
